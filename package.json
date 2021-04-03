@@ -1,0 +1,29 @@
+{
+  "name": "ton-api",
+  "version": "1.0.0",
+  "description": "Projeto de testes do desafio ton",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "Saulo ribeiro machado",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.877.0",
+    "aws-sdk-mock": "^5.1.0",
+    "crypto-js": "^4.0.0",
+    "jest": "^26.6.3",
+    "jest-each": "^26.6.2",
+    "jest-extended": "^0.11.5",
+    "lambda-tester": "^4.0.1",
+    "serverless-offline": "^6.9.0"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "countapi-js": "^1.0.2",
+    "crypto-js": "^4.0.0",
+    "jest-e2e-serverless": "^0.0.21",
+    "moment": "^2.29.1",
+    "serverless": "^2.32.1",
+    "serverless-webpack": "^5.4.0"
+  }
+}

@@ -1,0 +1,34 @@
+
+service: ton-api
+app: ton-api-app
+org: sauloribeiromachado
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  iamRoleStatements:
+      - Effect: "Allow"        
+        Action:
+          - dynamodb:GetItem 
+          - dynamodb:PutItem        
+        Resource: "arn:aws:dynamodb:us-east-1:613922845166:table/user"
+      
+functions:
+  increment:
+    handler: handler/increment.handler
+    events:
+      - http: POST count-visits
+  consult:
+    handler: handler/consult.handler
+    events:
+      - http: GET count-visits
+  create-user:
+    handler: handler/user.handler
+    events:
+      - http: POST user
+  user-data:
+    handler: handler/user-data.handler
+    events:
+      - http:
+          path: user/{cpf}
+          method: GET
